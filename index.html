@@ -1,11 +1,2487 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
+
 <head>
-<meta charset="utf-8">
-<title>TheBuzzMedia SMM Portfolio</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>TheBuzzMedia — Social Media Portfolio</title>
+
+  <meta
+
+    name="description"
+
+    content="Selected social media work by TheBuzzMedia."
+
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&display=swap"
+
+    rel="stylesheet"
+
+  />
+
+  <style>
+
+    /* =====================================================
+
+       RESET
+
+    ===================================================== */
+
+    * {
+
+      margin: 0;
+
+      padding: 0;
+
+      box-sizing: border-box;
+
+    }
+
+    html {
+
+      scroll-behavior: smooth;
+
+    }
+
+    body {
+
+      font-family: "DM Sans", sans-serif;
+
+      background: #f7f7f5;
+
+      color: #111111;
+
+      overflow-x: hidden;
+
+    }
+
+    img {
+
+      display: block;
+
+      width: 100%;
+
+    }
+
+    a {
+
+      color: inherit;
+
+      text-decoration: none;
+
+    }
+
+    button {
+
+      font: inherit;
+
+    }
+
+    ::selection {
+
+      background: #ff6a00;
+
+      color: #111111;
+
+    }
+
+    /* =====================================================
+
+       VARIABLES
+
+    ===================================================== */
+
+    :root {
+
+      --black: #111111;
+
+      --orange: #ff6a00;
+
+      --white: #ffffff;
+
+      --cream: #f7f7f5;
+
+      --gray: #e8e8e5;
+
+      --muted: #777777;
+
+      --container: 1320px;
+
+      --ease: cubic-bezier(.2,.7,.2,1);
+
+    }
+
+    /* =====================================================
+
+       GLOBAL
+
+    ===================================================== */
+
+    .container {
+
+      width: min(calc(100% - 64px), var(--container));
+
+      margin: 0 auto;
+
+    }
+
+    .mono {
+
+      font-family: "DM Mono", monospace;
+
+      text-transform: uppercase;
+
+      letter-spacing: .08em;
+
+      font-size: 11px;
+
+    }
+
+    /* =====================================================
+
+       NAVBAR
+
+    ===================================================== */
+
+    .navbar {
+
+      position: fixed;
+
+      top: 0;
+
+      left: 0;
+
+      width: 100%;
+
+      padding: 22px 0;
+
+      z-index: 100;
+
+      transition:
+
+        background .3s ease,
+
+        padding .3s ease,
+
+        backdrop-filter .3s ease;
+
+    }
+
+    .navbar.scrolled {
+
+      background: rgba(247,247,245,.82);
+
+      backdrop-filter: blur(16px);
+
+      padding: 15px 0;
+
+      border-bottom: 1px solid rgba(17,17,17,.07);
+
+    }
+
+    .nav-inner {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+    .brand {
+
+      font-size: 18px;
+
+      font-weight: 700;
+
+      letter-spacing: -.05em;
+
+    }
+
+    .brand span {
+
+      color: var(--orange);
+
+    }
+
+    .nav-right {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 35px;
+
+    }
+
+    .nav-link {
+
+      font-size: 13px;
+
+      color: #555;
+
+      transition: color .25s ease;
+
+    }
+
+    .nav-link:hover {
+
+      color: var(--black);
+
+    }
+
+    .nav-button {
+
+      background: var(--black);
+
+      color: white;
+
+      padding: 10px 17px;
+
+      border-radius: 100px;
+
+      font-size: 12px;
+
+      transition:
+
+        transform .25s ease,
+
+        background .25s ease;
+
+    }
+
+    .nav-button:hover {
+
+      transform: translateY(-2px);
+
+      background: var(--orange);
+
+      color: var(--black);
+
+    }
+
+    /* =====================================================
+
+       HERO
+
+    ===================================================== */
+
+    .hero {
+
+      min-height: 100vh;
+
+      padding-top: 150px;
+
+      padding-bottom: 70px;
+
+      display: flex;
+
+      align-items: center;
+
+      position: relative;
+
+    }
+
+    .hero-grid {
+
+      display: grid;
+
+      grid-template-columns: 1.05fr .95fr;
+
+      gap: 70px;
+
+      align-items: center;
+
+    }
+
+    /* LEFT */
+
+    .hero-left {
+
+      padding-bottom: 20px;
+
+    }
+
+    .eyebrow {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 10px;
+
+      margin-bottom: 30px;
+
+      color: #777;
+
+    }
+
+    .eyebrow-dot {
+
+      width: 7px;
+
+      height: 7px;
+
+      background: var(--orange);
+
+      border-radius: 50%;
+
+    }
+
+    .hero-title {
+
+      font-size: clamp(62px, 7vw, 110px);
+
+      line-height: .91;
+
+      letter-spacing: -.075em;
+
+      font-weight: 600;
+
+      max-width: 780px;
+
+    }
+
+    .hero-title .orange {
+
+      color: var(--orange);
+
+    }
+
+    .hero-description {
+
+      max-width: 430px;
+
+      margin-top: 38px;
+
+      font-size: 17px;
+
+      line-height: 1.65;
+
+      color: #666;
+
+    }
+
+    .hero-actions {
+
+      display: flex;
+
+      align-items: center;
+
+      gap: 22px;
+
+      margin-top: 38px;
+
+    }
+
+    .primary-button {
+
+      display: inline-flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      padding: 14px 21px;
+
+      background: var(--black);
+
+      color: white;
+
+      border-radius: 100px;
+
+      font-size: 13px;
+
+      transition:
+
+        transform .3s var(--ease),
+
+        background .3s ease;
+
+    }
+
+    .primary-button:hover {
+
+      transform: translateY(-3px);
+
+      background: var(--orange);
+
+      color: var(--black);
+
+    }
+
+    .secondary-button {
+
+      font-size: 13px;
+
+      color: #666;
+
+      display: inline-flex;
+
+      align-items: center;
+
+      gap: 8px;
+
+    }
+
+    .secondary-button span {
+
+      transition: transform .3s ease;
+
+    }
+
+    .secondary-button:hover span {
+
+      transform: translateX(5px);
+
+    }
+
+    /* RIGHT VISUAL */
+
+    .hero-visual {
+
+      position: relative;
+
+      height: 650px;
+
+    }
+
+    .hero-card-main {
+
+      position: absolute;
+
+      width: 78%;
+
+      height: 84%;
+
+      right: 0;
+
+      top: 5%;
+
+      overflow: hidden;
+
+      border-radius: 26px;
+
+      background: #ddd;
+
+      box-shadow:
+
+        0 30px 70px rgba(0,0,0,.13);
+
+    }
+
+    .hero-card-main img {
+
+      height: 100%;
+
+      width: 100%;
+
+      object-fit: cover;
+
+    }
+
+    .hero-card-small {
+
+      position: absolute;
+
+      width: 38%;
+
+      aspect-ratio: 1;
+
+      left: 0;
+
+      bottom: 2%;
+
+      overflow: hidden;
+
+      border-radius: 20px;
+
+      background: var(--orange);
+
+      border: 8px solid var(--cream);
+
+      box-shadow:
+
+        0 20px 50px rgba(0,0,0,.15);
+
+      z-index: 2;
+
+    }
+
+    .hero-card-small img {
+
+      height: 100%;
+
+      object-fit: cover;
+
+    }
+
+    .hero-floating-label {
+
+      position: absolute;
+
+      right: -10px;
+
+      bottom: 16%;
+
+      padding: 13px 17px;
+
+      background: var(--orange);
+
+      color: var(--black);
+
+      border-radius: 100px;
+
+      font-size: 11px;
+
+      font-family: "DM Mono", monospace;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+      z-index: 3;
+
+    }
+
+    /* =====================================================
+
+       INTRO STRIP
+
+    ===================================================== */
+
+    .intro {
+
+      padding: 110px 0 130px;
+
+    }
+
+    .intro-line {
+
+      width: 100%;
+
+      height: 1px;
+
+      background: #d8d8d5;
+
+      margin-bottom: 55px;
+
+    }
+
+    .intro-grid {
+
+      display: grid;
+
+      grid-template-columns: .25fr 1fr .45fr;
+
+      gap: 35px;
+
+    }
+
+    .intro-index {
+
+      color: var(--orange);
+
+    }
+
+    .intro-title {
+
+      font-size: clamp(40px, 5vw, 75px);
+
+      line-height: .97;
+
+      letter-spacing: -.065em;
+
+      font-weight: 600;
+
+    }
+
+    .intro-copy {
+
+      color: #777;
+
+      line-height: 1.65;
+
+      max-width: 310px;
+
+    }
+
+    /* =====================================================
+
+       WORK SECTION
+
+    ===================================================== */
+
+    .work {
+
+      padding-bottom: 130px;
+
+    }
+
+    /* CLIENT */
+
+    .client {
+
+      margin-bottom: 170px;
+
+    }
+
+    .client-top {
+
+      display: grid;
+
+      grid-template-columns: .2fr 1fr .42fr;
+
+      gap: 30px;
+
+      align-items: end;
+
+      margin-bottom: 35px;
+
+    }
+
+    .client-number {
+
+      color: var(--orange);
+
+    }
+
+    .client-name {
+
+      font-size: clamp(48px, 6vw, 90px);
+
+      line-height: .9;
+
+      letter-spacing: -.07em;
+
+      font-weight: 600;
+
+    }
+
+    .client-info {
+
+      font-size: 13px;
+
+      line-height: 1.6;
+
+      color: #777;
+
+    }
+
+    /* FEATURED IMAGE */
+
+    .featured {
+
+      position: relative;
+
+      overflow: hidden;
+
+      width: 100%;
+
+      border-radius: 25px;
+
+      background: var(--gray);
+
+      margin-bottom: 12px;
+
+    }
+
+    .featured img {
+
+      display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      max-width: 100%;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      transition: filter .5s ease;
+
+    }
+
+    .featured:hover img {
+
+      filter: brightness(.98);
+
+    }
+
+    .featured-label {
+
+      position: absolute;
+
+      top: 18px;
+
+      left: 18px;
+
+      background: rgba(17,17,17,.88);
+
+      color: white;
+
+      padding: 9px 13px;
+
+      border-radius: 100px;
+
+      font-size: 10px;
+
+      font-family: "DM Mono", monospace;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+      z-index: 2;
+
+    }
+
+    /* =====================================================
+
+       IMAGE TILES
+
+    ===================================================== */
+
+    .tiles {
+
+      display: grid;
+
+      grid-template-columns:
+
+        repeat(4, 1fr);
+
+      gap: 12px;
+
+    }
+
+    .tile {
+
+      overflow: hidden;
+
+      border-radius: 18px;
+
+      aspect-ratio: 4 / 5;
+
+      background: #e6e6e4;
+
+      position: relative;
+
+    }
+
+    .tile img {
+
+      display: block;
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: contain;
+
+      object-position: center;
+
+      background: #e6e6e4;
+
+      transition: filter .5s ease;
+
+    }
+
+    .tile:hover img {
+
+      filter: brightness(.94);
+
+    }
+
+    /* =====================================================
+
+       ORANGE BREAK
+
+    ===================================================== */
+
+    .orange-break {
+
+      background: var(--orange);
+
+      padding: 125px 0;
+
+      margin-bottom: 150px;
+
+    }
+
+    .orange-grid {
+
+      display: grid;
+
+      grid-template-columns: .25fr 1fr;
+
+      gap: 35px;
+
+    }
+
+    .orange-label {
+
+      padding-top: 8px;
+
+    }
+
+    .orange-title {
+
+      font-size: clamp(48px, 7vw, 105px);
+
+      line-height: .89;
+
+      letter-spacing: -.075em;
+
+      font-weight: 600;
+
+    }
+
+    /* =====================================================
+
+       FINAL CTA
+
+    ===================================================== */
+
+    .cta {
+
+      background: var(--black);
+
+      color: white;
+
+      padding: 145px 0 70px;
+
+    }
+
+    .cta-top {
+
+      display: flex;
+
+      justify-content: space-between;
+
+      align-items: flex-end;
+
+      gap: 50px;
+
+      margin-bottom: 130px;
+
+    }
+
+    .cta-title {
+
+      font-size: clamp(58px, 8vw, 125px);
+
+      line-height: .84;
+
+      letter-spacing: -.08em;
+
+      font-weight: 600;
+
+    }
+
+    .cta-title span {
+
+      color: var(--orange);
+
+    }
+
+    .cta-circle {
+
+      width: 145px;
+
+      height: 145px;
+
+      flex-shrink: 0;
+
+      border-radius: 50%;
+
+      background: var(--orange);
+
+      color: var(--black);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      text-align: center;
+
+      font-size: 13px;
+
+      font-weight: 600;
+
+      transition:
+
+        transform .4s var(--ease),
+
+        background .3s ease;
+
+    }
+
+    .cta-circle:hover {
+
+      transform: rotate(-10deg) scale(1.05);
+
+      background: white;
+
+    }
+
+    /* FOOTER */
+
+    .footer {
+
+      padding-top: 25px;
+
+      border-top: 1px solid #333;
+
+      display: flex;
+
+      justify-content: space-between;
+
+      color: #777;
+
+      font-size: 11px;
+
+      font-family: "DM Mono", monospace;
+
+      text-transform: uppercase;
+
+      letter-spacing: .05em;
+
+    }
+
+    /* =====================================================
+
+       REVEAL ANIMATION
+
+    ===================================================== */
+
+    .reveal {
+
+      opacity: 0;
+
+      transform: translateY(35px);
+
+      transition:
+
+        opacity .9s ease,
+
+        transform .9s var(--ease);
+
+    }
+
+    .reveal.visible {
+
+      opacity: 1;
+
+      transform: translateY(0);
+
+    }
+
+    /* =====================================================
+
+       TABLET
+
+    ===================================================== */
+
+    @media (max-width: 1000px) {
+
+      .hero-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 70px;
+
+      }
+
+      .hero-visual {
+
+        height: 560px;
+
+        max-width: 700px;
+
+        width: 100%;
+
+        margin-left: auto;
+
+      }
+
+      .intro-grid {
+
+        grid-template-columns: .2fr 1fr;
+
+      }
+
+      .intro-copy {
+
+        grid-column: 2;
+
+      }
+
+      .client-top {
+
+        grid-template-columns: .15fr 1fr;
+
+      }
+
+      .client-info {
+
+        grid-column: 2;
+
+      }
+
+    }
+
+    /* =====================================================
+
+       MOBILE
+
+    ===================================================== */
+
+    @media (max-width: 700px) {
+
+      .container {
+
+        width: calc(100% - 30px);
+
+      }
+
+      /* NAV */
+
+      .navbar {
+
+        padding: 17px 0;
+
+      }
+
+      .nav-right {
+
+        gap: 0;
+
+      }
+
+      .nav-link {
+
+        display: none;
+
+      }
+
+      .nav-button {
+
+        padding: 9px 14px;
+
+      }
+
+      /* HERO */
+
+      .hero {
+
+        min-height: auto;
+
+        padding-top: 125px;
+
+        padding-bottom: 65px;
+
+      }
+
+      .hero-grid {
+
+        gap: 55px;
+
+      }
+
+      .eyebrow {
+
+        margin-bottom: 22px;
+
+      }
+
+      .hero-title {
+
+        font-size: clamp(53px, 15vw, 82px);
+
+        line-height: .9;
+
+      }
+
+      .hero-description {
+
+        margin-top: 28px;
+
+        font-size: 15px;
+
+      }
+
+      .hero-actions {
+
+        margin-top: 28px;
+
+      }
+
+      .hero-visual {
+
+        height: 470px;
+
+      }
+
+      .hero-card-main {
+
+        width: 82%;
+
+        height: 88%;
+
+        border-radius: 20px;
+
+      }
+
+      .hero-card-small {
+
+        width: 40%;
+
+        border-width: 6px;
+
+        border-radius: 15px;
+
+      }
+
+      .hero-floating-label {
+
+        right: -4px;
+
+        bottom: 13%;
+
+        font-size: 9px;
+
+        padding: 10px 12px;
+
+      }
+
+      /* INTRO */
+
+      .intro {
+
+        padding: 80px 0 100px;
+
+      }
+
+      .intro-line {
+
+        margin-bottom: 38px;
+
+      }
+
+      .intro-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 24px;
+
+      }
+
+      .intro-copy {
+
+        grid-column: auto;
+
+        max-width: 330px;
+
+      }
+
+      /* CLIENT */
+
+      .work {
+
+        padding-bottom: 70px;
+
+      }
+
+      .client {
+
+        margin-bottom: 105px;
+
+      }
+
+      .client-top {
+
+        grid-template-columns: 1fr;
+
+        gap: 14px;
+
+        margin-bottom: 25px;
+
+      }
+
+      .client-info {
+
+        grid-column: auto;
+
+        max-width: 280px;
+
+      }
+
+      .client-name {
+
+        font-size: clamp(49px, 14vw, 76px);
+
+      }
+
+      /* FEATURED */
+
+      .featured {
+
+        border-radius: 19px;
+
+        margin-bottom: 9px;
+
+      }
+
+      /* TILES */
+
+      .tiles {
+
+        display: flex;
+
+        width: max-content;
+
+        gap: 9px;
+
+      }
+
+      .tiles-wrapper {
+
+        overflow-x: auto;
+
+        margin-right: -15px;
+
+        padding-right: 15px;
+
+        scrollbar-width: none;
+
+        overscroll-behavior-x: contain;
+
+      }
+
+      .tiles-wrapper::-webkit-scrollbar {
+
+        display: none;
+
+      }
+
+      .tile {
+
+        width: 72vw;
+
+        max-width: 290px;
+
+        flex-shrink: 0;
+
+        border-radius: 15px;
+
+      }
+
+      /* ORANGE */
+
+      .orange-break {
+
+        padding: 90px 0;
+
+        margin-bottom: 100px;
+
+      }
+
+      .orange-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+
+      }
+
+      .orange-title {
+
+        font-size: clamp(48px, 14vw, 76px);
+
+      }
+
+      /* CTA */
+
+      .cta {
+
+        padding: 95px 0 40px;
+
+      }
+
+      .cta-top {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        margin-bottom: 90px;
+
+      }
+
+      .cta-title {
+
+        font-size: clamp(58px, 16vw, 90px);
+
+      }
+
+      .cta-circle {
+
+        width: 120px;
+
+        height: 120px;
+
+      }
+
+      .footer {
+
+        flex-direction: column;
+
+        gap: 12px;
+
+      }
+
+    }
+
+    /* =====================================================
+
+       VERY SMALL
+
+    ===================================================== */
+
+    @media (max-width: 400px) {
+
+      .hero-title {
+
+        font-size: 15.5vw;
+
+      }
+
+      .hero-visual {
+
+        height: 410px;
+
+      }
+
+      .client-name {
+
+        font-size: 14vw;
+
+      }
+
+      .tile {
+
+        width: 78vw;
+
+      }
+
+    }
+
+    /* Portfolio reels: preserve the complete original frame */
+    .client-video {
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+      aspect-ratio: 9 / 16;
+      border-radius: 22px;
+      background: #111111;
+      margin-bottom: 0;
+    }
+
+    .portfolio-video {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      background: #111111;
+    }
+
+    .video-label {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      z-index: 3;
+      background: rgba(17, 17, 17, 0.88);
+      color: #ffffff;
+      padding: 8px 11px;
+      border-radius: 100px;
+      pointer-events: none;
+      font-size: 9px;
+    }
+
+    .video-fallback {
+      position: absolute;
+      right: 14px;
+      top: 14px;
+      z-index: 3;
+      background: var(--orange);
+      color: var(--black);
+      padding: 8px 11px;
+      border-radius: 100px;
+      font-size: 9px;
+      font-family: "DM Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+      text-decoration: none;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-bottom: 24px;
+      align-items: start;
+    }
+
+    @media (max-width: 900px) {
+      .video-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 700px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .client-video {
+        border-radius: 19px;
+      }
+
+      .video-label,
+      .video-fallback {
+        top: 12px;
+        font-size: 9px;
+        padding: 8px 10px;
+      }
+    }
+
+  </style>
+
 </head>
+
 <body>
-<p>Portfolio source has been added. Open the downloaded full HTML from this conversation for the complete design.</p>
+
+  <!-- =====================================================
+
+       NAVIGATION
+
+  ===================================================== -->
+
+  <nav class="navbar">
+
+    <div class="container nav-inner">
+
+      <a href="#" class="brand">
+
+        TheBuzz<span>Media</span>
+
+      </a>
+
+      <div class="nav-right">
+
+        <a href="#work" class="nav-link">
+
+          Work
+
+        </a>
+
+        <a href="#approach" class="nav-link">
+
+          Approach
+
+        </a>
+
+        <a href="#contact" class="nav-button">
+
+          Let's Talk
+
+        </a>
+
+      </div>
+
+    </div>
+
+  </nav>
+
+  <!-- =====================================================
+
+       HERO
+
+  ===================================================== -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="hero-grid">
+
+        <div class="hero-left reveal">
+
+          <div class="eyebrow mono">
+
+            <span class="eyebrow-dot"></span>
+
+            Social Media Portfolio
+
+          </div>
+
+          <h1 class="hero-title">
+
+            Making brands
+
+            <span class="orange">look</span>
+
+            like brands.
+
+          </h1>
+
+          <p class="hero-description">
+
+            Social media management, content direction and creative
+
+            strategy for businesses that want attention that actually
+
+            leads somewhere.
+
+          </p>
+
+          <div class="hero-actions">
+
+            <a href="#work" class="primary-button">
+
+              View selected work
+
+            </a>
+
+            <a href="#contact" class="secondary-button">
+
+              Start a project
+
+              <span>↗</span>
+
+            </a>
+
+          </div>
+
+        </div>
+
+        <div class="hero-visual reveal">
+
+          <div class="hero-card-main">
+
+            <img
+
+              src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/Kashmir%20Harvest%201.jpeg"
+
+              alt="Royal Kashmir Harvest social media work"
+
+            />
+
+          </div>
+
+          <div class="hero-card-small">
+
+            <img
+
+              src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%201.jpeg"
+
+              alt="Needs Burqa social media work"
+
+            />
+
+          </div>
+
+          <div class="hero-floating-label">
+
+            Selected / 2026
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </header>
+
+  <!-- =====================================================
+
+       INTRO
+
+  ===================================================== -->
+
+  <section class="intro" id="approach">
+
+    <div class="container">
+
+      <div class="intro-line"></div>
+
+      <div class="intro-grid reveal">
+
+        <div class="intro-index mono">
+
+          01 / Approach
+
+        </div>
+
+        <h2 class="intro-title">
+
+          Good social media
+
+          should make people
+
+          stop scrolling.
+
+        </h2>
+
+        <p class="intro-copy">
+
+          We combine visual direction, brand positioning and
+
+          platform-native content to build feeds that feel
+
+          intentional rather than manufactured.
+
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =====================================================
+
+       WORK
+
+  ===================================================== -->
+
+  <main class="work" id="work">
+
+    <div class="container">
+
+      <!-- =================================================
+
+           CLIENT 01
+
+      ================================================= -->
+
+      <article class="client reveal">
+
+        <div class="client-top">
+
+          <div class="client-number mono">
+
+            01 / 04
+
+          </div>
+
+          <h2 class="client-name">
+
+            Royal Kashmir<br>
+
+            Harvest
+
+          </h2>
+
+          <p class="client-info">
+
+            Social Media Management<br>
+
+            Creative Direction<br>
+
+            Content Strategy
+
+          </p>
+
+        </div>
+
+        <div class="featured">
+
+          <span class="featured-label">
+
+            Featured work
+
+          </span>
+
+          <img
+
+            src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/Kashmir%20Harvest%201.jpeg"
+
+            alt="Royal Kashmir Harvest featured creative"
+
+            loading="lazy"
+
+          />
+
+        </div>
+
+        <div class="video-grid">
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 01 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442627/Video-42899.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442627/Video-42899.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 02 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442783/Video-69194.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442783/Video-69194.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+        </div>
+
+        <div class="tiles-wrapper">
+
+          <div class="tiles">
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%202.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%202.jpeg"
+
+                alt="Royal Kashmir Harvest creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%204.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%204.jpeg"
+
+                alt="Royal Kashmir Harvest creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%205.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%205.jpeg"
+
+                alt="Royal Kashmir Harvest creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%206.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/kashmir%20harvest%206.jpeg"
+
+                alt="Royal Kashmir Harvest creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- =================================================
+
+           CLIENT 02
+
+      ================================================= -->
+
+      <article class="client reveal">
+
+        <div class="client-top">
+
+          <div class="client-number mono">
+
+            02 / 04
+
+          </div>
+
+          <h2 class="client-name">
+
+            Needs<br>
+
+            Burqa
+
+          </h2>
+
+          <p class="client-info">
+
+            Social Media Management<br>
+
+            Content Creation<br>
+
+            Brand Communication
+
+          </p>
+
+        </div>
+
+        <div class="featured">
+
+          <span class="featured-label">
+
+            Featured work
+
+          </span>
+
+          <img
+
+            src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%201.jpeg"
+
+            alt="Needs Burqa featured creative"
+
+            loading="lazy"
+
+          />
+
+        </div>
+
+        <div class="video-grid">
+          <div class="client-video" data-video-card>
+            <span class="video-label mono">Video 01 / Play</span>
+            <video class="portfolio-video" muted playsinline preload="metadata" controls data-portfolio-video>
+              <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442920/Video-45370.mp4" type="video/mp4" />
+            </video>
+            <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442920/Video-45370.mp4" target="_blank" rel="noopener">Open video ↗</a>
+          </div>
+          <div class="client-video" data-video-card>
+            <span class="video-label mono">Video 02 / Play</span>
+            <video class="portfolio-video" muted playsinline preload="metadata" controls data-portfolio-video>
+              <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442926/Video-47149.mp4" type="video/mp4" />
+            </video>
+            <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442926/Video-47149.mp4" target="_blank" rel="noopener">Open video ↗</a>
+          </div>
+          <div class="client-video" data-video-card>
+            <span class="video-label mono">Video 03 / Play</span>
+            <video class="portfolio-video" muted playsinline preload="metadata" controls data-portfolio-video>
+              <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442980/Video-77860.mp4" type="video/mp4" />
+            </video>
+            <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442980/Video-77860.mp4" target="_blank" rel="noopener">Open video ↗</a>
+          </div>
+        </div>
+
+        <div class="tiles-wrapper">
+
+          <div class="tiles">
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%202.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%202.jpeg"
+
+                alt="Needs Burqa creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%203.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%203.jpeg"
+
+                alt="Needs Burqa creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%204.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%204.jpeg"
+
+                alt="Needs Burqa creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+            <a
+
+              href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%205.jpeg"
+
+              target="_blank"
+
+              class="tile"
+
+            >
+
+              <img
+
+                src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/needs%205.jpeg"
+
+                alt="Needs Burqa creative"
+
+                loading="lazy"
+
+              />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+    </div>
+
+      <!-- =================================================
+
+           CLIENT 03
+
+      ================================================= -->
+
+      <article class="client reveal">
+
+        <div class="client-top">
+
+          <div class="client-number mono">
+
+            03 / 04
+
+          </div>
+
+          <h2 class="client-name">
+
+            NCI
+
+          </h2>
+
+          <p class="client-info">
+
+            Social Media Management<br>
+
+            Creative Strategy<br>
+
+            Content Design
+
+          </p>
+
+        </div>
+
+        <div class="featured">
+
+          <span class="featured-label">
+
+            Featured work
+
+          </span>
+
+          <img
+
+            src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%201.jpeg"
+
+            alt="NCI featured creative"
+
+            loading="lazy"
+
+          />
+
+        </div>
+
+        <div class="video-grid">
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 01 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442833/Video-14274.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442833/Video-14274.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 02 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442925/Video-5.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442925/Video-5.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 03 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442944/Video-38364.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442944/Video-38364.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+          <div class="client-video" data-video-card>
+              <span class="video-label mono">Video 04 / Play</span>
+              <video
+                class="portfolio-video"
+                muted
+                playsinline
+                preload="metadata"
+                controls
+                data-portfolio-video
+              >
+                <source src="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442953/Video-41053.mp4" type="video/mp4" />
+              </video>
+              <a class="video-fallback" href="https://res.cloudinary.com/cvdnh5k9/video/upload/v1791442953/Video-41053.mp4" target="_blank" rel="noopener">
+                Open video ↗
+              </a>
+            </div>
+        </div>
+
+        <div class="tiles-wrapper">
+
+          <div class="tiles">
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%202.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%202.jpeg" alt="NCI creative 2" loading="lazy" />
+
+            </a>
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%203.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%203.jpeg" alt="NCI creative 3" loading="lazy" />
+
+            </a>
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%204.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%204.jpeg" alt="NCI creative 4" loading="lazy" />
+
+            </a>
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%20SMM.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/NCI%20SMM.jpeg" alt="NCI SMM creative" loading="lazy" />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+      <!-- =================================================
+
+           CLIENT 04 — STELLAR PACKAGING
+
+      ================================================= -->
+
+      <article class="client reveal">
+
+        <div class="client-top">
+
+          <div class="client-number mono">
+
+            04 / 04
+
+          </div>
+
+          <h2 class="client-name">
+
+            Stellar<br>
+
+            Packaging
+
+          </h2>
+
+          <p class="client-info">
+
+            Social Media Management<br>
+
+            Product Content<br>
+
+            Creative Direction
+
+          </p>
+
+        </div>
+
+        <div class="featured">
+
+          <span class="featured-label">
+
+            Featured work
+
+          </span>
+
+          <img
+
+            src="https://github.com/Ateeqqqq/smm-portfolio/blob/main/WhatsApp%20Image%202026-10-08%20at%2011.36.15%20AM.jpeg?raw=true"
+
+            alt="Stellar Packaging featured creative"
+
+            loading="lazy"
+
+          />
+
+        </div>
+
+        <div class="tiles-wrapper">
+
+          <div class="tiles">
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.33%20AM.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.33%20AM.jpeg" alt="Stellar Packaging creative 2" loading="lazy" />
+
+            </a>
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.35%20AM.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.35%20AM.jpeg" alt="Stellar Packaging creative 3" loading="lazy" />
+
+            </a>
+
+            <a href="https://github.com/Ateeqqqq/smm-portfolio/blob/main/WhatsApp%20Image%202026-10-08%20at%2011.36.37%20AM.jpeg?raw=true" target="_blank" class="tile">
+
+              <img src="https://github.com/Ateeqqqq/smm-portfolio/blob/main/WhatsApp%20Image%202026-10-08%20at%2011.36.37%20AM.jpeg?raw=true" alt="Stellar Packaging creative 4" loading="lazy" />
+
+            </a>
+
+            <a href="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.38%20AM.jpeg" target="_blank" class="tile">
+
+              <img src="https://raw.githubusercontent.com/Ateeqqqq/smm-portfolio/refs/heads/main/WhatsApp%20Image%202026-10-08%20at%2011.36.38%20AM.jpeg" alt="Stellar Packaging creative 5" loading="lazy" />
+
+            </a>
+
+          </div>
+
+        </div>
+
+      </article>
+
+</main>
+
+  <!-- =====================================================
+
+       ORANGE STATEMENT
+
+  ===================================================== -->
+
+  <section class="orange-break">
+
+    <div class="container">
+
+      <div class="orange-grid">
+
+        <div class="orange-label mono">
+
+          02 / Philosophy
+
+        </div>
+
+        <h2 class="orange-title">
+
+          Pretty content<br>
+
+          is only the<br>
+
+          beginning.
+
+        </h2>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =====================================================
+
+       CTA
+
+  ===================================================== -->
+
+  <section class="cta" id="contact">
+
+    <div class="container">
+
+      <div class="cta-top">
+
+        <h2 class="cta-title">
+
+          Have a brand<br>
+
+          worth <span>seeing?</span>
+
+        </h2>
+
+        <a
+
+          href="mailto:hello@thebuzzmedia.co.in"
+
+          class="cta-circle"
+
+        >
+
+          Start<br>
+
+          a project<br>
+
+          ↗
+
+        </a>
+
+      </div>
+
+      <div class="footer">
+
+        <span>
+
+          © 2026 TheBuzzMedia
+
+        </span>
+
+        <span>
+
+          Social / Creative / Strategy
+
+        </span>
+
+        <span>
+
+          Hyderabad · India
+
+        </span>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- =====================================================
+
+       JAVASCRIPT
+
+  ===================================================== -->
+
+  <script>
+
+    /* Navbar background on scroll */
+
+    const navbar = document.querySelector(".navbar");
+
+    window.addEventListener("scroll", () => {
+
+      if (window.scrollY > 30) {
+
+        navbar.classList.add("scrolled");
+
+      } else {
+
+        navbar.classList.remove("scrolled");
+
+      }
+
+    });
+
+    /* Scroll reveal */
+
+    const observer = new IntersectionObserver(
+
+      entries => {
+
+        entries.forEach(entry => {
+
+          if (entry.isIntersecting) {
+
+            entry.target.classList.add("visible");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+
+      {
+
+        threshold: 0.12
+
+      }
+
+    );
+
+    document
+
+      .querySelectorAll(".reveal")
+
+      .forEach(element => observer.observe(element));
+
+    /* Portfolio videos: hover-to-play on desktop, tap-to-play on touch devices */
+    document.querySelectorAll("[data-portfolio-video]").forEach(video => {
+      const card = video.closest("[data-video-card]");
+      if (!card) return;
+
+      card.addEventListener("mouseenter", () => {
+        if (window.matchMedia("(hover: hover)").matches) {
+          video.play().catch(() => {});
+        }
+      });
+
+      card.addEventListener("mouseleave", () => {
+        if (window.matchMedia("(hover: hover)").matches) {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+
+      card.addEventListener("click", event => {
+        if (event.target.closest(".video-fallback") || event.target.closest("video")) return;
+        if (!window.matchMedia("(hover: hover)").matches) {
+          if (video.paused) video.play().catch(() => {});
+          else video.pause();
+        }
+      });
+    });
+
+  </script>
+
 </body>
+
 </html>
